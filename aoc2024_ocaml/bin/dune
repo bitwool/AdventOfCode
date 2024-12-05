@@ -1,0 +1,4 @@
+(executable
+ (public_name aoc2024_ocaml)
+ (name main)
+ (libraries aoc2024_ocaml))
