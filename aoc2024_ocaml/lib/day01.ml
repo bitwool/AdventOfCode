@@ -4,10 +4,8 @@ let line_to_tuple line =
   | _ -> failwith "Invalid input: expected exactly two non-empty strings"
 ;;
 
-let abs_diff x y = abs (x - y)
-
 let input () =
-  let lines = Aoc2024_ocaml__Util.read_all_lines "./input/day01.txt" in
+  let lines = Util.read_all_lines "./input/day01.txt" in
   lines |> List.map line_to_tuple |> List.split
 ;;
 
@@ -17,7 +15,7 @@ let part1 () =
   |> fun (l1, l2) ->
   (List.sort compare l1, List.sort compare l2)
   |> fun (l1, l2) ->
-  let diffs = List.map2 abs_diff l1 l2 in
+  let diffs = List.map2 (fun x y -> abs (x - y)) l1 l2 in
   List.fold_left ( + ) 0 diffs |> Printf.printf "part1 result: %d\n"
 ;;
 
