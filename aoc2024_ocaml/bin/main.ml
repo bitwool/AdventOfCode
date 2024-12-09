@@ -8,5 +8,6 @@ let () =
     match args.(1) with
     | "01" -> Day01.main ()
     | "02" -> Day02.main ()
+    | "03" -> Day03.main ()
     | _ -> Printf.printf "Invalid argument: %s. Use 01 or 02.\n" args.(1))
 ;;
