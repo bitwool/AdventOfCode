@@ -9,6 +9,7 @@ if args.Length > 1 then
 
     match day with
     | "day01" -> Day01.solve ()
+    | "day02" -> Day02.solve ()
     | _ -> printfn "Day not implemented."
 else
     printfn "No command line arguments provided."
