@@ -1,8 +1,1 @@
-aoc2024_ocaml/_build/*
-aoc2024_moonbit/target/*
-aoc2024_fsharp/bin/
-aoc2024_fsharp/obj/
-aoc2024_fsharp/packages/
-aoc2024_fsharp/riderModule.iml
-aoc2024_fsharp/_ReSharper.Caches/
-aoc2024_fsharp/.idea/*
+aoc2024-rust/target
