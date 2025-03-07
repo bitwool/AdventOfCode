@@ -1,4 +1,4 @@
-use std::fs::File;
+use std::fs::{self, File};
 use std::io::{self, BufRead};
 use std::path::Path;
 
@@ -26,4 +26,13 @@ pub fn read_lines(file_path: &str) -> Vec<String> {
     }
 
     lines
+}
+pub fn read_text(file_path: &str) -> String {
+    match fs::read_to_string(file_path) {
+        Ok(content) => content,
+        Err(error) => {
+            eprintln!("无法读取文件 {}: {}", file_path, error);
+            String::new() // 返回空字符串以表示出错
+        }
+    }
 }
