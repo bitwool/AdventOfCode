@@ -36,3 +36,20 @@ pub fn read_text(file_path: &str) -> String {
         }
     }
 }
+
+pub fn read_char_grid<P: AsRef<Path>>(path: P) -> Vec<Vec<char>> {
+    let file = File::open(path).unwrap();
+    let reader = io::BufReader::new(file);
+
+    let mut grid: Vec<Vec<char>> = Vec::new();
+
+    for line in reader.lines() {
+        let row: Vec<char> = line.unwrap().trim().chars().collect();
+
+        if !row.is_empty() {
+            grid.push(row);
+        }
+    }
+
+    grid
+}

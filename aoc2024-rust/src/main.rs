@@ -1,6 +1,7 @@
 mod day01;
 mod day02;
 mod day03;
+mod day04;
 mod fileutil;
 use std::env;
 
@@ -12,6 +13,7 @@ fn main() {
             "01" => day01::process(),
             "02" => day02::process(),
             "03" => day03::process(),
+            "04" => day04::process(),
             _ => println!("未知的日期参数"),
         }
     } else {
