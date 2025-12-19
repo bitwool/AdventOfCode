@@ -5,6 +5,7 @@
 
 #include "day01.hpp"
 #include "day02.hpp"
+#include "day03.hpp"
 #include "utils.hpp"
 
 int main(int argc, char** argv) {
@@ -14,10 +15,8 @@ int main(int argc, char** argv) {
     }
     int day = std::stoi(argv[1]);
 
-    std::filesystem::path inputPath;
-    char buf[16];
-    std::snprintf(buf, sizeof(buf), "day%02d.txt", day);
-    inputPath = std::filesystem::path("inputs") / buf;
+    const auto inputPath = std::filesystem::path("inputs") / std::format("day{:02}.txt", day);
+
     std::string input = read_file(inputPath);
     if (input.empty()) {
         std::cerr << "failed to read input: " << inputPath << "\n";
@@ -28,6 +27,8 @@ int main(int argc, char** argv) {
         day01::run(input);
     } else if (day == 2) {
         day02::run(input);
+    } else if (day == 3) {
+        day03::run(input);
     } else {
         return 1;
     }
