@@ -7,6 +7,7 @@
 #include "day02.hpp"
 #include "day03.hpp"
 #include "day04.hpp"
+#include "day05.hpp"
 #include "utils.hpp"
 
 int main(int argc, char** argv) {
@@ -32,6 +33,8 @@ int main(int argc, char** argv) {
         day03::run(input);
     } else if (day == 4) {
         day04::run(input);
+    } else if (day == 5) {
+        day05::run(input);
     } else {
         return 1;
     }

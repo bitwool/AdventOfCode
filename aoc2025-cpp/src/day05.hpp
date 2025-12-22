@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
 
-namespace day04 {
+namespace day05 {
     void run(const std::string& lines);
-}  // namespace day04
+}  // namespace day05
