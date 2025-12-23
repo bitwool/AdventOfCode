@@ -1,5 +1,3 @@
-#include "day03.hpp"
-
 #include <format>
 #include <iostream>
 #include <string>
