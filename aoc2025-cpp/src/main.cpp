@@ -10,9 +10,10 @@
 #include "day05.hpp"
 #include "day06.hpp"
 #include "day07.hpp"
+#include "day08.hpp"
 #include "utils.hpp"
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     if (argc < 2 || argc > 3) {
         std::cerr << "usage: aoc2025 <day> [input_path]\n";
         return 1;
@@ -41,6 +42,8 @@ int main(int argc, char** argv) {
         day06::run(input);
     } else if (day == 7) {
         day07::run(input);
+    } else if (day == 8) {
+        day08::run(input);
     } else {
         return 1;
     }
